@@ -1,0 +1,307 @@
+ERROR - 2024-12-06 07:47:40 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\sneha\codeigniter\reg_login\app\Controllers\UserController.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\CodeIgniter.php(933): App\Controllers\UserController->create()
+#9 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sneha\codeigniter\reg_login\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-06 07:47:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: register/create]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (:lname:, :email:, :password:, :gender:, :city:, :mobile_number:, :profile_image:, :multiple_images:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 07:47:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'admin@gmail.com\', \'$2y$10$lLPhm/l3HysHuxBrS4P11.6EW95xrrVp5ZtLsEVKMfaEHqShnCo/O\', \'Female\', \'Los Angeles\', \'1100110011\', \'1733471260_c273e96cdd9b148aed4e.webp\', \'[\\"1733471260_0d1343093f9e5278f587.webp\\",\\"1733471260_a28dd9e4ef70caec2ea3.webp\\"]\', \'2024-12-06 07:47:40\', \'2024-12-06 07:47:40\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'admin@gmail.com\', \'$2y$10$lLPhm/l3HysHuxBrS4P11.6EW95xrrVp5ZtLsEVKMfaEHqShnCo/O\', \'Female\', \'Los Angeles\', \'1100110011\', \'1733471260_c273e96cdd9b148aed4e.webp\', \'[\\"1733471260_0d1343093f9e5278f587.webp\\",\\"1733471260_a28dd9e4ef70caec2ea3.webp\\"]\', \'2024-12-06 07:47:40\', \'2024-12-06 07:47:40\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (:lname:, :email:, :password:, :gender:, :city:, :mobile_number:, :profile_image:, :multiple_images:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 07:47:40 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'admin@gmail.com\', \'$2y$10$lLPhm/l3HysHuxBrS4P11.6EW95xrrVp5ZtLsEVKMfaEHqShnCo/O\', \'Female\', \'Los Angeles\', \'1100110011\', \'1733471260_c273e96cdd9b148aed4e.webp\', \'[\\"1733471260_0d1343093f9e5278f587.webp\\",\\"1733471260_a28dd9e4ef70caec2ea3.webp\\"]\', \'2024-12-06 07:47:40\', \'2024-12-06 07:47:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'admin@gmail.com\', \'$2y$10$lLPhm/l3HysHuxBrS4P11.6EW95xrrVp5ZtLsEVKMfaEHqShnCo/O\', \'Female\', \'Los Angeles\', \'1100110011\', \'1733471260_c273e96cdd9b148aed4e.webp\', \'[\\"1733471260_0d1343093f9e5278f587.webp\\",\\"1733471260_a28dd9e4ef70caec2ea3.webp\\"]\', \'2024-12-06 07:47:40\', \'2024-12-06 07:47:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'admin@gmail.com\', \'$2y$10$lLPhm/l3HysHuxBrS4P11.6EW95xrrVp5ZtLsEVKMfaEHqShnCo/O\', \'Female\', \'Los Angeles\', \'1100110011\', \'1733471260_c273e96cdd9b148aed4e.webp\', \'[\\"1733471260_0d1343093f9e5278f587.webp\\",\\"1733471260_a28dd9e4ef70caec2ea3.webp\\"]\', \'2024-12-06 07:47:40\', \'2024-12-06 07:47:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (:lname:, :email:, :password:, :gender:, :city:, :mobile_number:, :profile_image:, :multiple_images:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UserController.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->create()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+ERROR - 2024-12-06 07:49:38 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\sneha\codeigniter\reg_login\app\Controllers\UserController.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\CodeIgniter.php(933): App\Controllers\UserController->create()
+#9 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sneha\codeigniter\reg_login\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sneha\codeigniter\reg_login\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-06 07:49:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: register/create]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (:lname:, :email:, :password:, :gender:, :city:, :mobile_number:, :profile_image:, :multiple_images:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 07:49:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'sneha@gmail.com\', \'$2y$10$pVynPdls5SERRjneszAzMOKWngeraMvTAwCswS6w08SFCfzhZNED.\', \'Female\', \'Los Angeles\', \'1234567890\', \'1733471378_ca836af76f945889a366.jpg\', \'[\\"1733471378_97106cc1464cb711f530.webp\\",\\"1733471378_1d72afd2605b2d381606.webp\\"]\', \'2024-12-06 07:49:38\', \'2024-12-06 07:49:38\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'sneha@gmail.com\', \'$2y$10$pVynPdls5SERRjneszAzMOKWngeraMvTAwCswS6w08SFCfzhZNED.\', \'Female\', \'Los Angeles\', \'1234567890\', \'1733471378_ca836af76f945889a366.jpg\', \'[\\"1733471378_97106cc1464cb711f530.webp\\",\\"1733471378_1d72afd2605b2d381606.webp\\"]\', \'2024-12-06 07:49:38\', \'2024-12-06 07:49:38\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (:lname:, :email:, :password:, :gender:, :city:, :mobile_number:, :profile_image:, :multiple_images:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 07:49:38 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'sneha@gmail.com\', \'$2y$10$pVynPdls5SERRjneszAzMOKWngeraMvTAwCswS6w08SFCfzhZNED.\', \'Female\', \'Los Angeles\', \'1234567890\', \'1733471378_ca836af76f945889a366.jpg\', \'[\\"1733471378_97106cc1464cb711f530.webp\\",\\"1733471378_1d72afd2605b2d381606.webp\\"]\', \'2024-12-06 07:49:38\', \'2024-12-06 07:49:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'sneha@gmail.com\', \'$2y$10$pVynPdls5SERRjneszAzMOKWngeraMvTAwCswS6w08SFCfzhZNED.\', \'Female\', \'Los Angeles\', \'1234567890\', \'1733471378_ca836af76f945889a366.jpg\', \'[\\"1733471378_97106cc1464cb711f530.webp\\",\\"1733471378_1d72afd2605b2d381606.webp\\"]\', \'2024-12-06 07:49:38\', \'2024-12-06 07:49:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (\'makvana\', \'sneha@gmail.com\', \'$2y$10$pVynPdls5SERRjneszAzMOKWngeraMvTAwCswS6w08SFCfzhZNED.\', \'Female\', \'Los Angeles\', \'1234567890\', \'1733471378_ca836af76f945889a366.jpg\', \'[\\"1733471378_97106cc1464cb711f530.webp\\",\\"1733471378_1d72afd2605b2d381606.webp\\"]\', \'2024-12-06 07:49:38\', \'2024-12-06 07:49:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`lname`, `email`, `password`, `gender`, `city`, `mobile_number`, `profile_image`, `multiple_images`, `created_at`, `updated_at`) VALUES (:lname:, :email:, :password:, :gender:, :city:, :mobile_number:, :profile_image:, :multiple_images:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\UserController.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->create()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 08:07:26 --> ParseError: syntax error, unexpected end of file
+[Method: POST, Route: register/create]
+in APPPATH\Config\Routes.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 08:07:53 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: register/create]
+in APPPATH\Config\Routes.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 08:08:03 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: register/create]
+in APPPATH\Config\Routes.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 08:08:24 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: register]
+in APPPATH\Config\Routes.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 08:08:26 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: register]
+in APPPATH\Config\Routes.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+ERROR - 2024-12-06 09:48:03 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:48:12 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:48:43 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:49:20 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:49:41 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:49:52 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:50:14 --> {"email":"The email field must contain a unique value.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:50:21 --> {"email":"The email field must contain a unique value.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:50:32 --> {"images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 09:53:55 --> {"email":"The email field must contain a unique value."}
+CRITICAL - 2024-12-06 10:00:14 --> ParseError: syntax error, unexpected token "]"
+[Method: GET, Route: register]
+in APPPATH\Controllers\UserController.php on line 76.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 10:00:17 --> ParseError: syntax error, unexpected token "]"
+[Method: GET, Route: login]
+in APPPATH\Controllers\UserController.php on line 76.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+CRITICAL - 2024-12-06 10:36:42 --> ParseError: syntax error, unexpected identifier "not"
+[Method: GET, Route: login]
+in APPPATH\Controllers\UserController.php on line 106.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+ERROR - 2024-12-06 10:40:36 --> {"email":"The email field must contain a unique value."}
+ERROR - 2024-12-06 11:05:02 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+INFO - 2024-12-06 11:18:05 --> User Query Result: {"id":"8","username":"sneha","lname":"makvana","email":"sneha1@gmail.com","password":"$2y$10$O2Tfc6yyFQDrBK16AaY6RuM2MI1yWXuLkp9kOgyInvw","gender":"Female","mobile_number":"2121212121","city":"UK","profile_image":"1733481643_3322dc883cb6b7477e5f.webp","multiple_images":"[\"1733481643_3ba29f37bbcf4068e75c.webp\",\"1733481643_b77646cfdb8abb7eed86.webp\"]"}
+INFO - 2024-12-06 11:19:44 --> User Query Result: {"id":"9","username":"sneha","lname":"makvana","email":"s1@gmail.com","password":"$2y$10$OZszq1xrfkkCrM5Z7oUJTOw\/kZZCsBUGrfYWIPNkpXd","gender":"Female","mobile_number":"9876543210","city":"India","profile_image":"1733483378_6cf4df30c19b8738592e.webp","multiple_images":"[\"1733483378_62fc5ac242457f695757.jpg\",\"1733483378_0b3361f20e12a7fcbe57.webp\"]"}
+INFO - 2024-12-06 11:20:24 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:22:56 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:23:04 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:25:07 --> User Query Result: {"id":"1","username":"sbc","lname":"makvana","email":"sneha@gmail.com","password":"$2y$10$QXi.MsGChLP1riq7xUyFauz5XKcuyoz1yeMyhyiwEYy","gender":"Female","mobile_number":"1234567890","city":"New York","profile_image":"1733471510_62093e656c79b2c76523.jpg","multiple_images":"[\"1733471511_3a8f1637e765d75a669d.webp\",\"1733471511_fcee856f0cd97ddd1244.webp\"]"}
+INFO - 2024-12-06 11:25:25 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:30:20 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:32:08 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:32:16 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:32:59 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:35:55 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:36:36 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:36:47 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+INFO - 2024-12-06 11:37:30 --> User Query Result: {"id":"10","username":"komal","lname":"kalsariya","email":"komal@gmail.com","password":"$2y$10$SB9ZbJRLpdXWpLvIUAXSmOBg8tbMTDdowyNEItlA0Be","gender":"Female","mobile_number":"9876543210","city":"USA","profile_image":"1733484015_e3664a0ad4120c310897.jpg","multiple_images":"[\"1733484015_8ac07c4e7c698a246e48.webp\",\"1733484015_4ee420188a9e0ee44cc5.webp\",\"1733484015_281726dcb7722f406475.webp\"]"}
+ERROR - 2024-12-06 11:37:41 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+ERROR - 2024-12-06 11:38:09 --> {"email":"The email field must contain a unique value."}
+INFO - 2024-12-06 11:38:31 --> User Query Result: {"id":"11","username":"Admin","lname":"kaklotar","email":"admin12@gmail.com","password":"$2y$10$FjSEzwsDkKtBAhCdxDdOq.ASl33\/W0oJmvm4QGiGYbx","gender":"Male","mobile_number":"1010101000","city":"India","profile_image":"1733485095_ed3a7e2d03c3aeda8697.webp","multiple_images":"[\"1733485095_fb052eb9ec744bccc49d.webp\",\"1733485095_f08de720f3cbdad9025f.webp\"]"}
+CRITICAL - 2024-12-06 11:42:03 --> ErrorException: Array to string conversion
+[Method: POST, Route: createLog]
+in APPPATH\Controllers\UserController.php on line 101.
+ 1 APPPATH\Controllers\UserController.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\app\\Controllers\\UserController.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->createLog()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+INFO - 2024-12-06 11:47:03 --> User Query Result: {"id":"12","username":"sneha","lname":"makvana","email":"sneha@gmail.com","password":"$2y$10$wE0hwfgNaKOjOeE9OOL7GudOrbB5eHHUiokzsFY6y3m","gender":"Female","mobile_number":"1234567890","city":"India","profile_image":"1733485615_c23557524b7f9c16fa00.webp","multiple_images":"[\"1733485615_d951fdb4c4139efeb443.webp\",\"1733485615_474191907fa29c17c6ed.webp\"]"}
+INFO - 2024-12-06 11:47:03 --> true
+INFO - 2024-12-06 11:47:20 --> User Query Result: {"id":"12","username":"sneha","lname":"makvana","email":"sneha@gmail.com","password":"$2y$10$wE0hwfgNaKOjOeE9OOL7GudOrbB5eHHUiokzsFY6y3m","gender":"Female","mobile_number":"1234567890","city":"India","profile_image":"1733485615_c23557524b7f9c16fa00.webp","multiple_images":"[\"1733485615_d951fdb4c4139efeb443.webp\",\"1733485615_474191907fa29c17c6ed.webp\"]"}
+INFO - 2024-12-06 11:47:20 --> true
+INFO - 2024-12-06 11:47:57 --> User Query Result: {"id":"11","username":"Admin","lname":"kaklotar","email":"admin12@gmail.com","password":"$2y$10$FjSEzwsDkKtBAhCdxDdOq.ASl33\/W0oJmvm4QGiGYbx","gender":"Male","mobile_number":"1010101000","city":"India","profile_image":"1733485095_ed3a7e2d03c3aeda8697.webp","multiple_images":"[\"1733485095_fb052eb9ec744bccc49d.webp\",\"1733485095_f08de720f3cbdad9025f.webp\"]"}
+INFO - 2024-12-06 11:47:57 --> true
+ERROR - 2024-12-06 11:50:04 --> {"password":"The password field is required."}
+INFO - 2024-12-06 11:50:15 --> User Query Result: {"id":"11","username":"Admin","lname":"kaklotar","email":"admin12@gmail.com","password":"$2y$10$FjSEzwsDkKtBAhCdxDdOq.ASl33\/W0oJmvm4QGiGYbx","gender":"Male","mobile_number":"1010101000","city":"India","profile_image":"1733485095_ed3a7e2d03c3aeda8697.webp","multiple_images":"[\"1733485095_fb052eb9ec744bccc49d.webp\",\"1733485095_f08de720f3cbdad9025f.webp\"]"}
+INFO - 2024-12-06 11:50:15 --> true
+INFO - 2024-12-06 11:50:37 --> User Query Result: {"id":"11","username":"Admin","lname":"kaklotar","email":"admin12@gmail.com","password":"$2y$10$FjSEzwsDkKtBAhCdxDdOq.ASl33\/W0oJmvm4QGiGYbx","gender":"Male","mobile_number":"1010101000","city":"India","profile_image":"1733485095_ed3a7e2d03c3aeda8697.webp","multiple_images":"[\"1733485095_fb052eb9ec744bccc49d.webp\",\"1733485095_f08de720f3cbdad9025f.webp\"]"}
+INFO - 2024-12-06 11:50:37 --> true
+INFO - 2024-12-06 12:07:27 --> User Query Result: {"id":"12","username":"sneha","lname":"makvana","email":"sneha@gmail.com","password":"$2y$10$wE0hwfgNaKOjOeE9OOL7GudOrbB5eHHUiokzsFY6y3m","gender":"Female","mobile_number":"1234567890","city":"India","profile_image":"1733485615_c23557524b7f9c16fa00.webp","multiple_images":"[\"1733485615_d951fdb4c4139efeb443.webp\",\"1733485615_474191907fa29c17c6ed.webp\"]"}
+INFO - 2024-12-06 12:07:27 --> true
+ERROR - 2024-12-06 12:11:25 --> {"username":"The username field is required.","lname":"The lname field is required.","email":"The email field is required.","password":"The password field is required.","gender":"The gender field is required.","mobile_number":"The mobile_number field is required.","city":"The city field is required.","profile_image":"profile_image is not a valid uploaded file.","images":"images is not a valid uploaded file."}
+INFO - 2024-12-06 12:12:07 --> User Found: {"id":"13","username":"Admin","lname":"makvana","email":"admin@gmail.com","password":"$2y$10$q1hsO7G5HOZ\/Zq1z.GItJOrM6fRGHLNqGyjVAYXu1E7","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487117_209ed65235cda4297e58.webp","multiple_images":"[\"1733487117_e20f4347b033190a26d0.webp\",\"1733487117_391c8aca7773bb1428ee.webp\"]"}
+INFO - 2024-12-06 12:12:10 --> User Found: {"id":"13","username":"Admin","lname":"makvana","email":"admin@gmail.com","password":"$2y$10$q1hsO7G5HOZ\/Zq1z.GItJOrM6fRGHLNqGyjVAYXu1E7","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487117_209ed65235cda4297e58.webp","multiple_images":"[\"1733487117_e20f4347b033190a26d0.webp\",\"1733487117_391c8aca7773bb1428ee.webp\"]"}
+INFO - 2024-12-06 12:12:19 --> User Found: {"id":"13","username":"Admin","lname":"makvana","email":"admin@gmail.com","password":"$2y$10$q1hsO7G5HOZ\/Zq1z.GItJOrM6fRGHLNqGyjVAYXu1E7","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487117_209ed65235cda4297e58.webp","multiple_images":"[\"1733487117_e20f4347b033190a26d0.webp\",\"1733487117_391c8aca7773bb1428ee.webp\"]"}
+INFO - 2024-12-06 12:14:27 --> User Found: {"id":"13","username":"Admin","lname":"makvana","email":"admin@gmail.com","password":"$2y$10$q1hsO7G5HOZ\/Zq1z.GItJOrM6fRGHLNqGyjVAYXu1E7","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487117_209ed65235cda4297e58.webp","multiple_images":"[\"1733487117_e20f4347b033190a26d0.webp\",\"1733487117_391c8aca7773bb1428ee.webp\"]"}
+INFO - 2024-12-06 12:15:54 --> User Found: {"id":"13","username":"Admin","lname":"makvana","email":"admin@gmail.com","password":"$2y$10$q1hsO7G5HOZ\/Zq1z.GItJOrM6fRGHLNqGyjVAYXu1E7","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487117_209ed65235cda4297e58.webp","multiple_images":"[\"1733487117_e20f4347b033190a26d0.webp\",\"1733487117_391c8aca7773bb1428ee.webp\"]"}
+INFO - 2024-12-06 12:16:41 --> User Found: {"id":"13","username":"Admin","lname":"makvana","email":"admin@gmail.com","password":"$2y$10$q1hsO7G5HOZ\/Zq1z.GItJOrM6fRGHLNqGyjVAYXu1E7","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487117_209ed65235cda4297e58.webp","multiple_images":"[\"1733487117_e20f4347b033190a26d0.webp\",\"1733487117_391c8aca7773bb1428ee.webp\"]"}
+INFO - 2024-12-06 12:17:32 --> User Found: {"id":"14","username":"sneha","lname":"makvana","email":"sneha@gmail.com","password":"$2y$10$oYqhVYM\/YTFNxEyV.raOwuoFEwoUVkoH0A.iTrGPPtl","gender":"Female","mobile_number":"1010101000","city":"India","profile_image":"1733487444_6d8b42742220206a9ee7.webp","multiple_images":"[\"1733487444_8212e3a12810de843466.webp\",\"1733487444_efe515ba2d2ef03046ef.webp\"]"}
+INFO - 2024-12-06 12:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-06 12:45:41 --> Error: Call to undefined function App\Controllers\set_cookie()
+[Method: POST, Route: createLog]
+in APPPATH\Controllers\UserController.php on line 122.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->createLog()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+INFO - 2024-12-06 12:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-06 12:45:50 --> Error: Call to undefined function App\Controllers\set_cookie()
+[Method: POST, Route: createLog]
+in APPPATH\Controllers\UserController.php on line 122.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->createLog()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\reg_login\\public\\index.php')
+INFO - 2024-12-06 12:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-06 13:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
